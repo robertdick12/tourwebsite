@@ -1,0 +1,885 @@
+@import url('http://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root {
+    --orange: #ffa500;
+    --black: #192a56;
+    --light-color: rgb(80, 80, 80);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.425);
+    --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+    --border: .1rem solid var(--black);
+    --white: #fff;
+    --light-bg: rgb(241, 241, 241);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--black); 
+}
+
+section{
+    padding: 3rem 10%;
+}
+
+.btn{
+    font-size: 1.7rem;
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color: var(--white);
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:rgba(31, 30, 28, 0.425);
+}
+
+/*==========LOGO==========*/
+
+.header .logo{
+    padding-bottom: 2rem;
+    position: fixed;
+    height: 30%;
+    left: .5rem;
+    width: 12rem;
+    margin-bottom: 2rem;
+    /* margin: 3rem; */
+}
+
+.header  {
+    background: rgba(172, 255, 47, 0.774);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex; 
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+     justify-content: space-between;
+     
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .navbar{
+    font-size: 2.5rem;
+    display: flex;
+    gap: 3rem;
+    color: var(--black);
+    /* padding-bottom: 500rem; */
+ }
+
+.header .navbar a:hover{
+    color: black;
+}
+
+#menu-btn{
+    cursor: pointer;
+    font-size: 2.5rem;
+    display: none;
+    color: var(--black);
+}
+
+ .home{
+    padding:0;
+ }
+
+ .home .slide{
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-size: cover !important;
+    background-position: center !important;
+    /*background-color: gold;*/
+    height: 53.9rem;
+    
+ }
+
+ .home:hover{
+    background: rgba(0, 0, 0, 0.692) ;
+ }
+
+ .home .slide .content{
+    width: 85rem;
+    /* background: rgba(0, 0, 0, 0.281) ; */
+ }
+
+ .home .slide .content h1{
+    font-size: 6rem;
+    padding-bottom: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 15rem;
+    background: rgba(0, 0, 0, 0.281);
+ }
+
+ .contents{
+    padding:2rem;
+ }
+
+ .contents p{
+    font-size: 2.2rem;
+    text-align: center;
+    /* padding-top: 2rem; */
+    padding-bottom: 3rem;
+    /* padding-left: 2rem; */
+    /* padding-right: 2rem; */
+    cursor: pointer;
+    color: black;
+    background-color: rgba(172, 255, 47, 0.219); 
+ }
+
+ .contents p:hover{
+    color: greenyellow;
+ }
+
+ .contents p strong{
+    font-size: 4.5rem;
+    color: greenyellow;
+ }
+
+
+ .about-home .video-container video{
+    padding: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    position: absolute;
+    top: 2rem; left: 0;
+    z-index: -30;
+    height: 130rem;
+    width: 100%;
+    object-fit:cover;  
+ }
+
+
+ .destination{
+    background: #fff;
+ }
+
+.destination .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 3rem;
+    border-radius: 2rem;
+}
+
+.destination .box-container .box{
+    /* border: var(--border);  */
+    box-shadow: var(--box-shadow); 
+    background: rgb(255, 255, 255);
+    border-radius: 2rem;
+}
+
+.destination .box-container .box .image{
+     height: 20rem; 
+     overflow: hidden;
+     border-radius: 3rem;  
+     /* padding: 2rem; */
+     object-fit: cover;
+}
+
+.destination .box-container .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    transition: 2s linear;
+    border-radius: 1.5rem;
+}
+
+.destination .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.destination .box-container .box .content h3{
+    font-size: 2.5rem;
+}
+
+.destination .box-container .box .content a{
+    border-radius: 1rem;
+}
+
+
+.destination h1{
+    font-size: 5rem;
+    text-align: center;
+    padding: 4rem; 
+    color: var(--black);
+}
+
+/* out types of tours */
+
+.tour{
+    background: var(--white);
+}
+
+.tour .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    /* gap: .5rem; */
+}
+
+.tour .box-container .box .image{
+    height: 14rem;
+    overflow: hidden;
+}
+
+.tour .box-container .box .image img{
+    width: 70%;
+    /* gap: .5rem; */
+    height: 75%;
+    border-radius: .5rem;
+}
+
+.tour .box-container .box p{
+    font-size: 1.4rem;
+}
+
+.tour h2{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--black);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* booking css */
+
+.booking .book-form{
+    padding: 4rem;
+    background: var(--light-bg);
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.booking .book-form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.booking .book-form .flex .inputBox{
+     flex: 1 1 1 1 41rem; 
+    /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.booking .book-form .flex .inputBox input{
+    width: 100%;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    text-transform: none;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+}
+
+.booking .book-form .flex .inputBox input .gender{
+    width: 100%;
+    /* padding: 1.2rem 2.4rem; */
+}
+
+.booking .book-form .flex .inputBox input:focus{
+    background: var(--black);
+    color: var(--white);
+}
+
+.booking .book-form .flex .inputBox span{
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.booking .book-form .btn{
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+.booking h1{
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 6.5rem;
+    padding-bottom: 2rem;
+    /* padding-top: rem; */
+}
+
+.booking .book-form .flex .box span{
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.booking .book-form .flex .box label{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    text-transform: none;
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+}
+
+.booking .book-form .flex .box input{
+    /* width: 100%; */
+    margin-top: 2.5rem;
+}
+
+.booking .inputbox span{
+    font-size: 1.5rem;
+    grid-template-columns: repeat(2fr, 2fr);
+    /* padding-top: 4rem; */
+    margin-top: 2rem;
+    float: initial;
+    display: inline;
+}
+
+.booking .inputBox textarea {
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    /* background: var(--color-white); */
+    color: var(--black);
+    border-radius: 1.5rem;
+}
+
+.booking h2{
+    padding: 1.5rem;
+}
+
+.booking p{
+    font-size: 2rem;
+    padding-top: 2rem;
+    text-align: left;
+    /* text-transform: none; */
+}
+
+.booking p i{
+    padding-right: 2rem;
+}
+
+
+
+/* MAIN ABOUT.HTML */
+
+.about .box-container{
+    width: 100%;
+    padding: 5rem;
+    padding-top: 4rem;
+    margin-top: 5rem;
+    color: var(--black);
+}
+
+.about .box-container p{
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 2rem;
+    text-transform: none; 
+    background: rgba(172, 255, 47, 0.308);
+}
+
+.about{
+    background:var(--white);
+}
+
+.about h1{
+    font-size: 5rem;
+    padding-top: 5.5rem;
+    padding-bottom: 0;
+    margin-bottom: 3rem;
+    /* padding-top: rem; */
+    text-align: center;
+}
+
+
+/* GHANA TOUR.CSS */
+.ghana-content{
+    padding: 2rem;
+    background: rgba(172, 255, 47, 0.473);
+}
+
+.ghana-content p{
+    font-size: 2rem;
+    text-align: left;
+}
+
+.ghana-tour{
+    background: var(--white);
+}
+
+.ghana-tour .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 3rem;
+}
+
+.ghana-tour .box-container .box{
+    /* border: var(--border);  */
+    box-shadow: var(--box-shadow); 
+    background: rgb(255, 255, 255);
+    border-radius: 2rem; 
+}
+
+.ghana-tour .box-container .box .image{
+    height: 35rem;
+    overflow: hidden;
+}
+
+.ghana-tour .box-container .box .image img{
+    width: 80%;
+    /* gap: .5rem; */
+    height: 60%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.ghana-tour .box-container .box .image img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;  
+    transition: 2s linear;
+    border-radius: 1.5rem;
+}
+
+.ghana-tour .box-container .box p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.ghana-tour h2{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--black);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ghana-tour .box-container .box  a{
+    border-radius: 1rem;
+    text-align: center;
+    margin-left: 10rem;
+}
+
+/* END OF GHANA TOUR.CSS */
+
+
+/* BENIN TOUR.CSS */
+
+.benin{
+    padding: 2rem;
+    background: rgba(172, 255, 47, 0.473);
+}
+
+.benin p{
+    font-size: 2.5rem;
+    text-align: left;
+}
+/* END OF BENIN TOUR.CSS */
+
+/* TOGO TOUR.CSS */
+
+.togo{
+    padding: 2rem;
+    background: rgba(172, 255, 47, 0.473);
+}
+
+.togo p{
+    font-size: 2rem;
+    text-align: left;
+}
+
+.section .a{
+    font-size: 2.5rem;
+    border-radius: 2rem;
+}
+
+/* END TOGO TOUR.CSS */
+
+/* BlOG.CSS */
+
+.all-tour{
+    padding: 3.5rem;
+}
+
+.all-tour h2{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--black);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    margin-top: 10rem;
+}
+
+.all-tour .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    /* gap: .5rem; */
+}
+
+.all-tour .box-container .box .image{
+    height: 24rem;
+    overflow: hidden;
+}
+
+.all-tour .box-container .box .image img{
+    width: 95%;
+    /* gap: .5rem; */
+    height: 75%;
+    border-radius: .5rem;
+}
+
+.all-tour .box-container .box p{
+    font-size: 1.4rem;
+}
+
+/* END BlOG.CSS */
+
+/* CONTACT.CSS */
+
+.contact-us{
+    padding: 5rem;
+    padding-bottom: 5rem;
+    margin-left: -2rem;
+    text-align: center;
+}
+
+.contact-us .box-container{
+    padding-top: 4rem;
+}
+
+.contact-us .box-container .box h3{
+    font-size: 3.5rem;
+    align-items: center;
+}
+
+.contact-us .box-container .box  a{
+    font-size: 3rem;
+    display: block;
+    padding: 1rem;
+    text-transform: none;
+}
+
+/* DISCOUNT INFO */
+
+.info{
+    padding: 1rem;
+}
+
+.info .container{
+    padding: 1rem;
+    background:transparent;
+}
+
+.info .container h1{
+    font-size: 4rem;
+    text-align: center;
+    background:rgba(172, 255, 47, 0.185);
+    padding: 1rem;
+    border-radius: 2rem;
+    /* width: 70%; */
+    max-width: fit-content;
+    margin-left: 40rem;
+}
+
+.info .container h1:hover{
+    background: greenyellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background:greenyellow;
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--box-shadow);
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2.7rem;
+}
+
+.footer .box-container .box h3{
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--light-color);
+    padding-bottom: 1rem;
+    text-transform: none;
+}
+
+.footer .box-container .box a:hover{
+    color: var(--black);
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: var(--black);
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+
+
+
+
+/*media queries*/
+
+@media (max-width:1200px){
+    
+    section{ 
+        padding: 3rem 5%;
+    }
+
+    .about-home a{
+        border-radius: 1rem;
+        padding-top: 1rem;
+        /* padding-bottom: 2rem; */
+        margin-left: 47rem;
+     }
+
+     .info .container h1{
+        font-size: 3.5rem;
+        text-align: center;
+        background: greenyellow;
+        padding: 1rem;
+        border-radius: 1rem;
+        /* width: 70%; */
+        max-width: fit-content;
+        margin-left: 18rem;
+    }
+
+    .header .logo{
+        padding-bottom: 2rem;
+        position: fixed;
+        height: 3%;
+        left: 6rem;
+        width: 10rem;
+        margin-bottom: 2rem;
+        /* margin: 3rem; */
+    }
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    section{
+        padding: 3rem 2%;
+    }
+
+    .about-home a{
+        border-radius: 1rem;
+        padding-top: 1rem;
+        /* padding-bottom: 2rem; */
+        margin-left: 38rem;
+     }
+
+     .info .container h1{
+        font-size: 3rem;
+        text-align: center;
+        background: greenyellow;
+        padding: 1rem;
+        border-radius: 1rem;
+        /* width: 70%; */
+        max-width: fit-content;
+        margin-left: 27rem;
+    }
+
+    .header .logo{
+        padding-bottom: 2rem;
+        position: fixed;
+        height: auto;
+        left: 6rem;
+        width: 10rem;
+        margin-bottom: 2rem;
+        /* margin: 3rem; */
+    }
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+    
+    #menu-bar.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: rgba(172, 255, 47, 0.842);
+        border: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        padding: 1rem;
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar {
+        display: block;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: center;
+    }
+
+    .about-home a{
+        border-radius: 1rem;
+        padding-top: 1rem;
+        /* padding-bottom: 2rem; */
+        margin-left: 19rem;
+     }
+
+    /*.about-home p{
+        /*font-size: 1.5rem;
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 0;
+        padding-left: 0;
+     }*/
+    
+    section{
+        padding: 3rem 5%;
+    }
+
+    .info .container h1{
+        font-size: 3rem;
+        text-align: center;
+        background: greenyellow;
+        padding: 1rem;
+        border-radius: 1rem;
+        /* width: 70%; */
+        max-width: fit-content;
+        margin-left: 5rem;
+    }
+
+    .header .logo{
+        padding-bottom: 2rem;
+        position: fixed;
+        height: auto;
+        left: 6rem;
+        width: 10rem;
+        margin-bottom: 2rem;
+        /* margin: 3rem; */
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+    
+    section{
+        padding: 3rem 5%;
+    }
+
+    .about-home a{
+        border-radius: 1rem;
+        padding-top: 1rem;
+        /* padding-bottom: 2rem; */
+        margin-left: 15rem;
+     }
+
+     .info .container h1{
+        font-size: 2.5rem;
+        text-align: center;
+        background: greenyellow;
+        padding: 1rem;
+        border-radius: 1rem;
+        /* width: 70%; */
+        max-width: fit-content;
+        margin-left: 5rem;
+    }    
+
+    .contact-us{
+        padding: 5rem;
+        padding-bottom: 5rem;
+        margin-left: -4.5rem;
+        text-align: center;
+    }
+
+    .ghana-tour .box-container .box  a{
+        border-radius: 1rem;
+        text-align: center;
+        margin-left: 15rem;
+    }
+
+    .header .logo{
+        padding-bottom: 2rem;
+        position: fixed;
+        height: auto;
+        left: 2rem;
+        width: 8.5rem;
+        margin-bottom: 2rem;
+        /* margin: 3rem; */
+    }
+}
